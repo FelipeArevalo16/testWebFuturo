@@ -11,7 +11,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", cast=bool)
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = ['https://testwebfuturo.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
@@ -72,9 +72,9 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "plataforma_cursos",
-        "USER": "postgres",
-        "PASSWORD": config("DATABASE_PASSWORD"),
-        "HOST": "localhost",
+        "USER": "plataforma_cursos_user",
+        "PASSWORD": "jnEYMFD3WBFOzH01u6hCZzmM4AJVacXp",
+        "HOST": "dpg-d14pkvodl3ps738h372g-a.oregon-postgres.render.com",
         "PORT": "5432",
     }
 }
